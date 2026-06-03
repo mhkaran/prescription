@@ -1,0 +1,589 @@
+{
+    "info": {
+        "_postman_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "name": "Prescription App API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": "API collection for the Prescription App, generated based on entity repositories."
+    },
+    "item": [
+        {
+            "name": "Health Check",
+            "item": [
+                {
+                    "name": "GET Health Check",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/health-check",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "health-check"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Doctors",
+            "item": [
+                {
+                    "name": "Get All Doctors",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/doctors",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "doctors"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Doctor By ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/doctors/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "doctors",
+                                ":id"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Doctor",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "Dr. Jane Doe",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "jane.doe@example.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "mobile",
+                                    "value": "9876543210",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "gender",
+                                    "value": "F",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "specialization",
+                                    "value": "Pediatrics",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "licenseNumber",
+                                    "value": "LIC-54321",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "456 Wellness Ave",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "city",
+                                    "value": "Healthville",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "state",
+                                    "value": "State",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "country",
+                                    "value": "Country",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "pincode",
+                                    "value": "123456",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "terms",
+                                    "value": "true",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "updatedBy",
+                                    "value": "<user-id>",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "logo",
+                                    "type": "file",
+                                    "src": []
+                                },
+                                {
+                                    "key": "signature",
+                                    "type": "file",
+                                    "src": []
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/doctor/create",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "doctor",
+                                "create"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Doctor",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "Dr. Jane Doe",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "jane.doe@example.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "mobile",
+                                    "value": "9876543211",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "gender",
+                                    "value": "F",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "specialization",
+                                    "value": "General Pediatrics",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "licenseNumber",
+                                    "value": "LIC-54321-UPDATED",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "456 Wellness Ave, Suite 100",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "city",
+                                    "value": "Healthville",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "state",
+                                    "value": "State",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "country",
+                                    "value": "Country",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "pincode",
+                                    "value": "123456",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "terms",
+                                    "value": "true",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "updatedBy",
+                                    "value": "<user-id>",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "logo",
+                                    "type": "file",
+                                    "src": []
+                                },
+                                {
+                                    "key": "signature",
+                                    "type": "file",
+                                    "src": []
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/doctors/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "doctors",
+                                ":id"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Doctor",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/doctors/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "doctors",
+                                ":id"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Patients",
+            "item": [
+                {
+                    "name": "Get All Patients",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/patients",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "patients"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Patient By ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/patients/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "patients",
+                                ":id"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Patient",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"John Smith\",\n    \"gender\": \"Male\",\n    \"dateOfBirth\": \"1985-05-20\",\n    \"mobile\": \"9876543210\",\n    \"email\": \"john.smith@example.com\",\n    \"address\": \"789 Patient Rd\",\n    \"city\": \"Patientville\",\n    \"state\": \"State\",\n    \"country\": \"Country\",\n    \"pincode\": \"543210\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/patients",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "patients"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Patient",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"John Smith\",\n    \"gender\": \"Male\",\n    \"dateOfBirth\": \"1985-05-20\",\n    \"mobile\": \"9876543211\",\n    \"email\": \"john.smith.new@example.com\",\n    \"address\": \"789 Patient Rd, Apt 2\",\n    \"city\": \"Patientville\",\n    \"state\": \"State\",\n    \"country\": \"Country\",\n    \"pincode\": \"543210\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/patients/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "patients",
+                                ":id"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Patient",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/patients/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "patients",
+                                ":id"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Medicines",
+            "item": [
+                {
+                    "name": "Get All Medicines",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/medicines",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "medicines"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Medicine",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"brand\": \"PharmaBrand\",\n    \"name\": \"Ibuprofen 200mg\",\n    \"composition\": \"Ibuprofen\",\n    \"manufacturer\": \"Genericorp\",\n    \"type\": \"Tablet\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/medicines",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "medicines"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Prescriptions",
+            "item": [
+                {
+                    "name": "Get All Prescriptions",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/prescriptions",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "prescriptions"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Prescription",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"doctorId\": \"<doctor-uuid>\",\n    \"patientId\": \"<patient-uuid>\",\n    \"diagnosisName\": \"Common Cold\",\n    \"comments\": \"Rest and fluids.\",\n    \"medicines\": [\n        {\n            \"medicineName\": \"Paracetamol 500mg\",\n            \"usage\": \"1-0-1\",\n            \"days\": 3,\n            \"dose\": \"After food\",\n            \"report\": false\n        }\n    ]\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/prescriptions",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "prescriptions"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Billing Plans",
+            "item": [
+                {
+                    "name": "Get All Billing Plans",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/billing-plans",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "billing-plans"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Billing Plan",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Standard Monthly\",\n    \"doctorId\": \"<doctor-uuid>\",\n    \"startDate\": \"2024-01-01\",\n    \"endDate\": \"2024-12-31\",\n    \"amount\": \"100.00\",\n    \"currency\": \"USD\",\n    \"active\": true\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/billing-plans",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "billing-plans"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Billing Payments",
+            "item": [
+                {
+                    "name": "Get All Billing Payments",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/billing-payments",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "billing-payments"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Billing Payment",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"doctorId\": \"<doctor-uuid>\",\n    \"billingPlanId\": \"<plan-uuid>\",\n    \"amount\": \"100.00\",\n    \"tax\": \"18.00\",\n    \"billablePrescriptionRecord\": \"50\",\n    \"nonBillablePrescriptionRecord\": \"5\",\n    \"paymentDate\": \"2024-02-01T10:00:00Z\",\n    \"paymentMethod\": \"Credit Card\",\n    \"paymentReference\": \"txn_123456789\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/billing-payments",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "billing-payments"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
